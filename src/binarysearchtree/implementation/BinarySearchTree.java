@@ -52,9 +52,30 @@ public class BinarySearchTree <E extends Comparable<E>> {
         }
     }
     public void preOrderTraversal(Node<E> node){
+        if (node == null)
+            return;
 
+        /* first print data of node */
+        System.out.print(node.getData() + " ");
+
+        /* then recur on left sutree */
+        preOrderTraversal(node.getLeft());;
+
+        /* now recur on right subtree */
+        preOrderTraversal(node.getRight());
     }
     public void postOrderTraversal(Node<E> node){
+        if (node == null)
+            return;
+
+        // first recur on left subtree
+        postOrderTraversal(node.getLeft());
+
+        // then recur on right subtree
+        postOrderTraversal(node.getRight());
+
+        // now deal with the node
+        System.out.print(node.getData() + " ");
 
     }
 

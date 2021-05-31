@@ -87,4 +87,28 @@ public class AVLTree <E extends Comparable<E>> {
             inOrderTraversal(tempRoot.getRight());
         }
     }
+        public void preOrderTraversal(Node<E> tempRoot){
+            if (tempRoot == null)
+                return;
+            /* first print data of node */
+            System.out.print(tempRoot.getData() + " ");
+            /* then recur on left sutree */
+            preOrderTraversal(tempRoot.getLeft());;
+            /* now recur on right subtree */
+            preOrderTraversal(tempRoot.getRight());
+        }
+        public void postOrderTraversal(Node<E> tempRoot ){
+            if (tempRoot == null)
+                return;
+
+            // first recur on left subtree
+            postOrderTraversal(tempRoot.getLeft());
+
+            // then recur on right subtree
+            postOrderTraversal(tempRoot.getRight());
+
+            // now deal with the node
+            System.out.print(tempRoot.getData() + " ");
+
+        }
 }

@@ -21,13 +21,18 @@ public class Main {
         binarySearchTree.insert(55);
         binarySearchTree.insert(50);
         binarySearchTree.insert(42);
+        System.out.println("inOder--> ");
          binarySearchTree.inOrderTraversal(binarySearchTree.getRoot());
-        System.out.println();
-        binarySearchTree.delete(75);
-        binarySearchTree.inOrderTraversal(binarySearchTree.getRoot());
-        System.out.println();
-        var result = binarySearchTree.searchElement(23);
-        System.out.println(result);
+//        System.out.println();
+//        binarySearchTree.delete(75);
+//        binarySearchTree.inOrderTraversal(binarySearchTree.getRoot());
+//        System.out.println();
+//        var result = binarySearchTree.searchElement(23);
+//        System.out.println(result);
+        System.out.println("preOder--> ");
+        binarySearchTree.preOrderTraversal(binarySearchTree.getRoot());
+        System.out.println("postOder--> ");
+        binarySearchTree.postOrderTraversal(binarySearchTree.getRoot());
 
 //        System.out.println("------MENU------");
 //        System.out.println("OPERATION-- OR ---ORDER");

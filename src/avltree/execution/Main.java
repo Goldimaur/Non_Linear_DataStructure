@@ -20,6 +20,11 @@ public class Main {
         avlTree.setRoot(avlTree.insert(4, avlTree.getRoot()));
         avlTree.setRoot(avlTree.insert(13, avlTree.getRoot()));
         avlTree.setRoot(avlTree.insert(12, avlTree.getRoot()));
+        System.out.println("inOrder");
         avlTree.inOrderTraversal(avlTree.getRoot());
+        System.out.println("postOrder");
+        avlTree.postOrderTraversal(avlTree.getRoot());
+        System.out.println("preOrder");
+        avlTree.preOrderTraversal(avlTree.getRoot());
     }
 }
